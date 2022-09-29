@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./song/anhSeOnThoi.mp3">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav-bar">
+            <div class="logo">
+                MS
+            </div>
+            <div class="active">
+                <i class="fa-solid fa-house"></i>
+                home
+            </div>
+            <div>
+                <i class='bx bxs-album'></i>
+                Album
+            </div>
+            <div>
+                <i class="fa-regular fa-user"></i>
+                Artists
+            </div>
+
+            <div>
+                <i class="fa-sharp fa-solid fa-film"></i>
+                Videos
+            </div>
+
+            <div>  
+                <i class='bx bx-bar-chart-square'></i>
+                Activity
+            </div>
+
+            <div>
+                <i class='bx bxs-alarm-exclamation'></i>
+                Recently played
+            </div>
+
+            <div>
+                <i class="fa-regular fa-file"></i>
+                Local file
+            </div>
+
+            <div>
+                <i class="fa-sharp fa-solid fa-chart-line"></i>
+                Charts
+            </div>
+
+        </div>
+        <div class="container">
+            <header class="header">
+                <div class="header__search">
+                    <i class='bx bxs-grid-alt bx-spin' ></i>
+                    <div class="header__search-box">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="header__search-input" placeholder="Search">
+                    </div>
+                </div>
+                <div class="sign-in">
+                    Log in
+                </div>
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                    <div class="notification__message">Đăng nhập để xem thông báo</div>
+                </div>
+                <div class="setting">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+            </header>
+            <div class="content">
+                <div class="top-artists">
+                    <h2 class="top-artists__title">
+                        Top Artists
+                    </h2>
+                    <ul class="top-artists__list row">
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://vtv1.mediacdn.vn/thumb_w/640/2019/1/5/untitled-1546707374226762520753.png" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Đen Vâu</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://i.scdn.co/image/ab67616d0000b2730e3ed9fa733275d7e8eeb539" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Soobin Hoàng Sơn</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://file.tinnhac.com/resize/600x-/2019/08/24/20190824085632-bc3c.jpg" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Bích Phương</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://dj24h.com/wp-content/uploads/2022/07/bat-coc-con-tim-lou-hoang.jpg" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Lou Hoàng</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://static-images.vnncdn.net/files/publish/voi-do-rach-duoc-lam-bang-tay-moi-chiec-ao-noaa-deu-la-doc-ban-f16b4d0cc9864a38a0fe834c0905a246.jpg" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Sơn Tùng MTP</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdExKK-LqKCmeOn4tzFLjT61wSJLjDcQTDFNBmQuvsfzi5mEhzIhGHIe5Z6Qut9QIWDzRuvQku10j5xsgJupEB-eO8k1JGGl4-qhD9unFWHAQNe0CoyR1kYHOhrZwWDoC1-hQLswpOOAmuxhju3x6WVqtaOaZXi6cWQ1VKaxdIMTbfaUAzKVYzI0B2/s2048/cover%20(1).jpg" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Min</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/7/1/6/a/716ad904bcbe6447f531f714a3148f5d.jpg" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Chi Pu</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_png/covers/8/2/8267067fcfc2e20764586ce8605004ad_1520306797.png" alt="" >
+                                </div>
+                                <h4 class="top-artist__item-name">Hồ Quang Hiếu</h4>
+                            </li>
+                        </div>
+                        <div class="col l-2-4 m-3">
+                            <li class="top-artist__item">
+                                <div class="top-artist__item-img">
+                                    <img src="https://huesmiletravel.com.vn/wp-content/uploads/2020/05/khong-the-cung-nhau-suot-kiep.jpg" class="top-artist__item-img" alt="">
+                                </div>
+                                <h4 class="top-artist__item-name">Hoà Minzy</h4>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="player-name">
+                    <h3>Now Playing</h3>
+                    <h3>
+                        <i class='bx bxs-playlist'></i>
+                        Play List
+                    </h3>
+                </div>
+                <div class="area-player">
+                            <div class="player">
+                                <div class="cd">
+                                    <img src="https://i1.sndcdn.com/artworks-aSSryj3WoKLjgRSz-mhyZvQ-t500x500.jpg" alt="" class="thumb">
+                                </div>
+                                <div class="song-details ">
+                                    <p class="current-song-name">Nơi này có Anh</p>
+                                    <p class="current-song-author">Sơn Tùng MTP</p>
+                                    <p class="release">Ngày phát hành: <span>09/08/2022</span></p>
+                                </div>
+                                <div class="reac">
+                                    <div class="reac-like">
+                                        <i class="icon-heart fa-regular fa-heart"></i>
+                                    </div>
+                                    <div class="reac-more">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div>
+                                </div>
+                                <div class="player-controls-container">
+                                    <div class="controls-left">
+                                        <div class="controls-left__thumb">
+                                            <img class="thumb" src="https://i1.sndcdn.com/artworks-aSSryj3WoKLjgRSz-mhyZvQ-t500x500.jpg" alt="">
+                                        </div>
+                                        <div class="controls-left__content">
+                                            <h3 class="current-song-name">Nơi này có anh</h3>
+                                            <p class="current-song-author">Sơn Tùng MTP</p>
+                                        </div>
+                                        <div class="like">
+                                            <i class="icon-heart fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="player-controls__player-bar">
+                                        <div class="controls-center">
+                                            <div class="btn-random">
+                                                <i class=" fa-solid fa-shuffle"></i>
+                                            </div>
+                                            <div class="btn-prev"><i class="fa-solid fa-backward-step"></i></div>
+                                            <div class="btn-play-pause">
+                                                <i class="fa-sharp fa-solid fa-circle-pause icon-pause"></i>
+                                                <i class="fa-sharp fa-solid fa-circle-play icon-play"></i>
+                                            </div>
+                                            <div class="btn-next">
+                                                <i class="fa-solid fa-forward-step"></i>
+                                            </div>
+                                            <div class="btn-repeat">
+                                                <i class="fa-solid fa-arrow-rotate-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="progress-area">
+                                            <span class="current-time">0:00</span>
+                                            <div class="progress-bar">
+                                                <div class="current-progress"></div>
+                                            </div>
+                                            <audio src="" id="audio"></audio>
+                                                <span class="max-duaration">3:45</span>
+                                        </div>
+                                    </div>
+                                    <div class="controls-right">
+                                        <div class="share">
+                                            <i class="fa-solid fa-share-nodes"></i>
+                                        </div>
+                                        <div class="volume">
+                                            <i class="icon-mute hiden fa-solid fa-volume-xmark"></i>
+                                            <i class="icon-volume fa-solid fa-volume-high"></i>
+                                            <div class="volume-bar">
+                                                <div class="current-volume"></div>
+                                            </div>
+                                        </div>
+                                        <div class="download">
+                                            <i class='bx bx-download'></i>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="music-list">
+                                
+                            </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="wrap-form hiden">
+            <div class="form-close"><i class='bx bx-x'></i></div>
+            <form method="POST" action="" class="form hiden" id="register-form">
+                <h3 class="form-heading">Đăng Ký</h3>
+                <div class="spacer"></div>
+                <div class="form-group">
+                    <label for="user-name" class="form-lable">Tên đăng nhập</label>
+                    <input class="form-control" rules="required" id="user-name" name="user-name" placeholder="Nhập tên đăng nhập" type="text">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-lable">Email</label>
+                    <input class="form-control" rules="required|email" id="email" name="email" placeholder="VD:email@gmail.com" type="text">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-lable">Mật khẩu</label>
+                    <input class="form-control" rules="required|min:6" id="password" name="password" placeholder="Nhập mật khẩu" type="password">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password_confirmation" class="form-lable">Nhập lại mật khẩu</label>
+                    <input class="form-control" rules="required|isConfirmed" id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password">
+                    <span class="form-message"></span>
+                </div>
+                <p class="switch-login-form">Bạn đã có tài khoảng? <a href="#">Đăng nhập</a></p>
+                <button class="form-submit">Đăng ký</button>
+            </form>
+            <form method="POST" action="" class="form" id="login-form">
+                
+                <h3 class="form-heading">Đăng Nhập</h3>
+                <div class="spacer"></div>
+                <div class="form-group">
+                    <label for="user-name" class="form-lable">Tên đăng nhập</label>
+                    <input class="form-control" rules="required" id="user-name" name="user-name" placeholder="Nhập tên đăng nhập" type="text">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-lable">Mật khẩu</label>
+                    <input class="form-control" rules="required|min:6" id="password" name="password" placeholder="Nhập mật khẩu" type="password">
+                    <span class="form-message"></span>
+                </div>
+                <p class="switch-register-form">Bạn chưa có tài khoảng? <a href="#">Đăng ký</a></p>
+                <button class="form-submit">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/validator.js"></script>
+    <script>
+        validator('#register-form');
+        validator('#login-form');
+    </script>
+</body>
+</html>
+
