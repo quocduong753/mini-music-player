@@ -384,7 +384,7 @@ const app = {
     },
     // Hàm tải thông tin bài hát hiện tại
     loadCurrentSong: function(){
-        // app.setConfig('currentIndex', app.currentIndex);
+        app.setConfig('currentIndex', app.currentIndex);
         currentSongNames.forEach((item) =>{
             item.innerText = app.currentSong.name;
         });
@@ -401,7 +401,9 @@ const app = {
     loadConfig: function(){
         this.isRandom = this.config.isRandom;
         this.isRepeat = this.config.isRepeat;
-        // this.currentIndex = this.config.currentIndex;
+        this.currentIndex = this.config.currentIndex;
+        randomBtn.classList.toggle('active', app.isRandom);
+        repeatBtn.classList.toggle('active', app.isRepeat);
     },
     // hàm next bài hát
     nextSong: function(){
@@ -594,8 +596,6 @@ const app = {
 
     start: function(){
         this.loadConfig();
-        randomBtn.classList.toggle('active', app.isRandom);
-        repeatBtn.classList.toggle('active', app.isRepeat);
         this.defineProperties();
         this.render();
         this.loadCurrentSong();
