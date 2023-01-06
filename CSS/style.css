@@ -54,7 +54,7 @@ body{
     margin: 8px auto 30px;
     font-size: 25px;
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     width: 48px;
     height: 45px;
     text-align: center;
@@ -173,8 +173,50 @@ header{
 }
 
 .top-artists{
+    position: relative;
     color: var(--text-color);
 }
+
+.top-artists__control{
+
+}
+
+.top-artists__prev{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    z-index: 3;
+    font-size: 35px;
+    left: -15px;
+    transform: translateY( -10%);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-artists__next{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    z-index: 2;
+    font-size: 35px;
+    right: -15px;
+    transform: translateY(-10%);
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 .top-artists__title{
     margin-bottom: 10px;
@@ -189,6 +231,11 @@ header{
 .top-artists__list::-webkit-scrollbar{
     display: none;
 }
+
+.top-artists__list .col{
+    transition: 0.5s;
+}
+
 .top-artist__item{
     list-style: none;
     cursor: pointer;
