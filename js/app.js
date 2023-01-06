@@ -10,6 +10,10 @@ const switchLoginF = $('.switch-login-form');
 const switchRegisterF = $('.switch-register-form');
 const registerForm = $('#register-form');
 const loginForm = $('#login-form');
+const topArtistsPrev = $('.top-artists__prev');
+const topArtistsNext = $('.top-artists__next');
+const topArtistList = $$('.col');
+const topArtist = $('.top-artists__list');
 const playList = $('.music-list');
 const release = $('.release span');
 const currentSongNames = $$('.current-song-name');
@@ -56,7 +60,6 @@ closeForm.onclick = ()=>{
     },150);
 }
 
-
 switchLoginF.onclick = () => {
     addClass(registerForm,'hiden');
     removeClass(loginForm,'hiden');
@@ -66,6 +69,35 @@ switchRegisterF.onclick = () => {
     removeClass(registerForm,'hiden');
     addClass(loginForm,'hiden');
 }
+
+let  currentActiv = 4;
+
+scrollToActiv = function(){
+    setTimeout(() => {
+        $(".col.activ").scrollIntoView({
+            behavior: "smooth", block: "nearest", inline: "end",
+        })
+    }, 80)
+}
+
+topArtistsNext.onclick = function(){
+    $('.col.activ').classList.remove('activ');
+    currentActiv++;
+    if(currentActiv >= topArtistList.length) currentActiv=4;
+    topArtistList[currentActiv].classList.add('activ');
+    scrollToActiv();   
+
+}
+
+topArtistsPrev.onclick = function(){
+    $('.col.activ').classList.remove('activ');
+    currentActiv--;
+    if(currentActiv < 4) currentActiv=topArtistList.length-1;
+    topArtistList[currentActiv].classList.add('activ');
+    scrollToActiv();  
+}
+
+  
 
 const app = {
 
@@ -228,7 +260,7 @@ const app = {
             name:'Đau để trưởng thành',
             singer: 'Only C',
             path: './song/y2meta.com - ĐAU ĐỂ TRƯỞNG THÀNH _ ONLYC _ OFFICIAL MV (256 kbps).mp3',
-            image: 'https://data.chiasenhac.com/data/cover/137/136504.jpg',
+            image: 'https://i.ytimg.com/vi/eoJecvGMR6E/maxresdefault.jpg',
             release: '01/04/2021'
         },
         {
@@ -351,10 +383,6 @@ const app = {
             release: '20/11/2021'
         },
     ],
-    setConfig: function(key, value){
-        this.config[key] = value;
-        localStorage.setItem(PLAYER_STORAGE_KEY,JSON.stringify(this.config));
-    },
     // Hàm render playlist
     render: function(){
         const htmls = this.song.map((song,index) => {
@@ -384,7 +412,6 @@ const app = {
     },
     // Hàm tải thông tin bài hát hiện tại
     loadCurrentSong: function(){
-        // app.setConfig('currentIndex', app.currentIndex);
         currentSongNames.forEach((item) =>{
             item.innerText = app.currentSong.name;
         });
@@ -434,7 +461,13 @@ const app = {
             $(".song.active").scrollIntoView({
                 behavior: "smooth", block: "nearest",
             })
-        }, 100)
+        }, 50)
+    },
+    
+    switchActiveSong: function(){
+        $('.song.active').classList.remove('active');
+        songs[app.currentIndex].classList.add('active');
+        app.scrollToActiveSong();
     },
 
     // Hàm xử lý các sự kiện
@@ -541,7 +574,8 @@ const app = {
                 app.nextSong();
             }
             audio.play();
-            app.scrollToActiveSong();
+            app.switchActiveSong();
+            // app.scrollToActiveSong();
         }
 
         // khí ấn prev bài hát
@@ -553,20 +587,19 @@ const app = {
                 app.prevSong();
             }
             audio.play();
-            app.scrollToActiveSong();
+            app.switchActiveSong();
+            // app.scrollToActiveSong();
         }
 
         // khi bật tắt nút random
         randomBtn.onclick = function(){
             app.isRandom = !app.isRandom;
-            app.setConfig('isRandom', app.isRandom);
             randomBtn.classList.toggle('active', app.isRandom);
         }
 
         // khi bật tắt repeat
         repeatBtn.onclick = function(){
             app.isRepeat = !app.isRepeat;
-            app.setConfig('isRepeat', app.isRepeat);
             repeatBtn.classList.toggle('active', app.isRepeat);
         }
 
@@ -587,10 +620,6 @@ const app = {
             }else{
                 nextBtn.click();
             }
-        }
-        audio.onloadeddata = function(){
-            $('.song.active').classList.remove('active');
-            songs[app.currentIndex].classList.add('active');
         }
     },
 
